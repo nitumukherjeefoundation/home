@@ -14,11 +14,25 @@ html, body {
     line-height: 1.6;
     background-color: #f3f4eb;
     color: #333;
+    place-items: center;
+    scroll-behavior: smooth;
 }
 
-.logo h1{
+.web_logo h1{
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5vw;;
+    font-size: 2.3vw;
+}
+
+.web_logo img{
+    height: 4vw;
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease;
+}
+
+.web_logo li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Navbar Styles */
@@ -107,13 +121,13 @@ nav ul li:hover .tooltip {
 
 nav .menu li a {
     display: flex;
-    align-items: center; /* Centers the logo vertically inside each link */
+    align-items: center;
     justify-content: center;
 }
 
 nav .menu li a img {
     height: auto;
-    filter: brightness(0) invert(1); /* This inverts the image color to white if logos are dark */
+    filter: brightness(0) invert(1); 
     transition: transform 0.3s ease;
 }
 
@@ -147,14 +161,62 @@ nav .menu li a img:hover {
     display: block;
 }
 
+/* slider for gallery*/
+.slider-container-gal {
+    position: relative;
+    max-width: 65%;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  .slider-gal {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slide-gal {
+    min-width: 100%;
+  }
+
+  .slide-gal img {
+    width: 100%;
+    display: block;
+    border-radius: 2vw;
+  }
+
+  .slide-gal:hover img {
+    transform: scale(1.05);
+    filter: brightness(.9);
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  button.prev {
+    left: 10px;
+  }
+
+  button.next {
+    right: 10px;
+  }
+
 /* Container for Intro Text */
 .intro-text {
     background-color: #f6f7f2;
     padding: 3vw;
-    max-width: 70%; /* Ensures the content doesn't go full width */
-    margin: 2vw; /* Centers the intro text box */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some depth */
+    max-width: 70%; 
+    margin: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1); /* Optional: Adds some depth */
 }
 
 /* Heading Style */
@@ -187,6 +249,7 @@ nav .menu li a img:hover {
     margin-top: 1.5vw; /* Space above the button */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
     text-align: center;
+    align-self: end;
 }
 
 /* Button hover effect */
@@ -247,7 +310,7 @@ footer {
 
 .footer-address a {
     display: inline-block;
-    margin: 0 10px; /* Adds horizontal spacing between icons */
+    margin: 0 1vw; /* Adds horizontal spacing between icons */
 }
 
 .footer-address a img {
@@ -345,8 +408,8 @@ footer {
     padding: 3vw;
     max-width: 70%; /* Ensures the content doesn't go full width */
     margin: 2vw; /* Centers the intro text box */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds some depth */
+    border-radius: 1vw;
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1); /* Optional: Adds some depth */
 }
 
 /* Timeline container */
@@ -371,7 +434,7 @@ footer {
 .timeline-date {
     background-color: #2C3E50;
     color: #fff;
-    padding: 10px;
+    padding: 1vw;
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -386,7 +449,7 @@ footer {
     background-color: white;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 1vw rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     position: relative;
     max-width: 200px;
@@ -450,25 +513,28 @@ footer {
 
 .grid-container {
     display: grid;
+    max-width: 70%;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 8vw; 
-    padding: 1vw 3vw 3vw 3vw;
+    margin: 1vw;
+    gap: 2vw; 
+    /* padding: 1vw 3vw 3vw 3vw; */
 }
 
 .grid-item {
-    width: 25vw;
+    width: 22vw;
     background-color: #f6f7f2;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 2vw;
+    border: .1vw solid #ddd;
     text-align: center;
     border-radius: 2.5vw;
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1);
 }
 
 .grid-item img {
-    width: 20vw; 
+    max-width: 100%; 
     height: auto;
     display: block;
-    margin: 0 auto 10px; /* Center image and add margin below */
+    margin: 0 auto 1vw; /* Center image and add margin below */
     border: .1vw solid #333;
     border-radius: 2vw;
     filter: brightness(1);
@@ -485,10 +551,10 @@ footer {
 }
 
 .grid-item p {
-    font-size: 1.1vw;
+    font-size: 1vw;
     color: #333;
     text-align: justify;
-    padding: 1.5vw;
+    padding: 1vw;
 }
 
 .grid-btn-container {
@@ -500,4 +566,109 @@ footer {
 
 .grid-btn-item {
     width: 25vw;
+}
+
+.grid-member {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 6fr); 
+    margin: 2vw;
+    gap: 2vw; 
+    /* padding: 1vw 3vw 3vw 3vw; */
+}
+
+.grid-member-item {
+    /* width: 22vw;
+    background-color: #f6f7f2;
+    border: .1vw solid #ddd; */
+    padding: 1.3vw;
+    text-align: center;
+    /* border-radius: 2.5vw;
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1); */
+}
+
+.grid-member-item img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto 1vw; 
+    filter: brightness(1);
+}
+
+.grid-member-item:hover img{
+    transform: scale(1.05);
+}
+
+.two-grid {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 2vw;
+    gap: 1.3vw; 
+}
+
+.two-grid-item {
+    padding: 0vw;
+    text-align: center;
+    text-align: justify;
+}
+
+.two-grid-item img {
+    max-width:100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto 1vw; 
+    filter: brightness(1);
+    border-radius: 1vw;
+}
+
+.two-grid-item:hover img{
+    transform: scale(1.05);
+}
+
+.collapsible {
+    background-color: #eef0e8;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 1.5vw;
+    padding-left: 3vw;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1);
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #e4e7dc;
+  }
+
+.collapsible:after {
+    content: '\002B';
+    color: rgb(85, 65, 65);
+    font-weight: bold;
+    float: right;
+    margin-left: 1vw;
+  }
+  
+.active:after {
+    content: "\2212";
+  }
+  
+.collapsible-content {
+    padding: 0 1vw;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 1vw;
+    transition: max-height 0.2s ease-out;
+    background-color: #f3f4eb;
+  }
+
+.collapsible-content p {
+    font-size: 1vw;
+    color: #333;
+    text-align: justify;
+    padding: 1vw;
 }

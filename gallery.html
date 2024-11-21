@@ -13,38 +13,131 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">
-          <h1>Nitu Mukherjee Foundation</h1>
+            <ul class="web_logo">
+                <li><img src="logo/logo.png" alt="logo"></li>
+                <li><h1>Nitu Mukherjee Foundation</h1></li>
+            </ul>
         </div>
         <ul class="menu">
           <li><a href="index.html"><img src="logo/home.ico" class="logo-home"  alt="Home"><span class="tooltip">Home</span></a></li>
           <li><a href="about.html"><img src="logo/info.ico" class="logo-about" alt="About Us"><span class="tooltip">About us</span></a></li>
           <li><a href="gallery.html"><img src="logo/gallery.ico" class = "logo-gallery" alt="Gallery"><span class="tooltip">Gallery</span></a></li>
-          <li><a href="ongoing-work.html"><img src="logo/current_proj.ico" class="logo-ongoing" alt="Ongoing Work"><span class="tooltip">Ongoing Projects</span></a></li>
+          <li><a href="ongoing-work.html"><img src="logo/current_proj.ico" class="logo-ongoing" alt="Projects"><span class="tooltip">Projects</span></a></li>
           <li><a href="publication.html"><img src="logo/article.ico" class="logo-writings" alt="Writings"><span class="tooltip">Writings</span></a></li>
           <li><a href="htmtm.html"><img src="logo/htmtm.ico" class="logo-project" alt="Project Hattimatim Tim"><span class="tooltip">Hattimatim Tim</span></a></li>
         </ul>
-      </nav>
+    </nav>
 
-    <!-- Main content -->
-    <div class="grid-btn-container">
-        <div class="grid-btn-element">
-            <center><a href="" class="know-more-button">2019</a> </center>
-        </div>
-        <div class="grid-btn-element">
-            <center><a href="" class="know-more-button">2020</a> </center>
-        </div>
-        <div class="grid-btn-element">
-            <center><a href="" class="know-more-button">2021</a> </center>
-        </div>
-        <div class="grid-btn-element">
-            <center><a href="" class="know-more-button">2022</a> </center>
-        </div>
-        <div class="grid-btn-element">
-            <center><a href="" class="know-more-button">2023</a> </center>
-        </div>
-    </div>
+    <div class = "main-content">
+        <!-- Gallery -->
+        <center>
+            <div class="intro-text">
+                <h1 class="intro-heading">Gallery</h1>
+                <p class="intro-body-text">
+                    A collection of the memories we made throughout the journey. 
+                    Here you may find a glimpse into the multitude of pursuits across 
+                    <i>Shiksha Sanjeevanee</i> and book distribution programs, environmental and 
+                    humanitarian domains. 
+                    <br>
+                    <br>
+                    To know further about the individual projects refer to the "Projects" section.
+                </p>
+                <center><a href="ongoing-work.html" class="know-more-button">Know More</a> </center>
+            </div>
 
-    <!-- Footer -->
+        <!-- Image Slider -->
+         <!-- 2024 -->
+        <div class="intro-text">
+            <h1 class="intro-heading">2024</h1>
+            <p>
+                <i>Shiksha Sanjeevanee</i>: book-distribution, year-long academic sessions, 
+                mock tests, home visits; School visit; Career camp.
+            </p>
+        </div>
+
+        <div class="slider-container-gal">
+            <div class="slider-gal" id="slider5">
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2024 BD.png" alt="2024 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2024 SS.png" alt="2024 SS"></a></div>
+            </div>
+            <button class="prev" onclick="prevSlide('slider5')">⟨</button>
+            <button class="next" onclick="nextSlide('slider5')">⟩</button>
+        </div>
+
+        
+        
+        <!-- 2023 -->
+        <div class="intro-text">
+            <h1 class="intro-heading">2023</h1>
+            <p>
+                Book-distribution, mock tests; Medical camp; Blood donation camp.
+            </p>
+        </div>
+        <div class="slider-container-gal">
+            <div class="slider-gal" id="slider4">
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2023 BD.png" alt="2023 BD"></a></div>
+            </div>
+            <button class="prev" onclick="prevSlide('slider4')">⟨</button>
+            <button class="next" onclick="nextSlide('slider4')">⟩</button>
+        </div>
+
+
+        <!-- 2022 -->
+        <div class="intro-text">
+            <h1 class="intro-heading">2022</h1>
+            <p>
+                Book-distribution; Medical camp; Environmental projects.
+            </p>
+        </div>        
+        <div class="slider-container-gal">
+            <div class="slider-gal" id="slider3">
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2022 BD.png" alt="2022 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2022 EDU.png" alt="2022 EDU"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #env"><img src="img/gallery/2022 ENV.png" alt="2022 ENV"></a></div>
+            </div>
+            <button class="prev" onclick="prevSlide('slider3')">⟨</button>
+            <button class="next" onclick="nextSlide('slider3')">⟩</button>
+        </div>
+
+
+        <!-- 2021 -->
+        <div class="intro-text">
+            <h1 class="intro-heading">2021</h1>
+            <p>
+                Book-distribution; Medical camp; Environmental projects.
+            </p>
+        </div>        
+        <div class="slider-container-gal">
+            <div class="slider-gal" id="slider2">
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2021 BD.png" alt="2021 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #env"><img src="img/gallery/2021 ENV.png" alt="2021 ENV"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #hum"><img src="img/gallery/2021 HU.png" alt="2021 HU"></a></div>
+            </div>
+            <button class="prev" onclick="prevSlide('slider2')">⟨</button>
+            <button class="next" onclick="nextSlide('slider2')">⟩</button>
+        </div>
+
+
+        <!-- 2017 - 20 -->
+        <div class="intro-text">
+            <h1 class="intro-heading">2017 - '20</h1>
+            <p>
+                Book-distribution; Medical camp; Environmental projects.
+            </p>
+        </div>        
+        <div class="slider-container-gal">
+            <div class="slider-gal" id="slider1">
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2020 BD.png" alt="2020 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2019 BD.png" alt="2019 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2018 BD.png" alt="2018 BD"></a></div>
+            <div class="slide-gal"><a href="ongoing-work.html #edu"><img src="img/gallery/2017 BD.png" alt="2017 BD"></a></div>
+            </div>
+            <button class="prev" onclick="prevSlide('slider1')">⟨</button>
+            <button class="next" onclick="nextSlide('slider1')">⟩</button>
+        </div>
+
+    </center>
+
     <footer>
         <div class="footer-section">
             <div class="footer-social">
@@ -69,7 +162,7 @@
                         <p style="font-size:100%">2017nitumukherjeefoundation@gmail.com</p>
                     </div>
                 </div>
-                
+
                 <div class = "call" style="display:inline-block;vertical-align:top;">
                     <img src = "logo/call.ico">
                 </div>
@@ -81,5 +174,53 @@
             </div>
         </div>
     </footer>
+    
+
+    <script>
+        const currentIndex = { slider1: 0, slider2: 0 , 
+                               slider3: 0, slider4: 0, 
+                               slider5: 0,
+                            };
+        const intervalIds = {};
+    
+        function nextSlide(sliderId) {
+          const slider = document.getElementById(sliderId);
+          const slides = slider.children;
+          currentIndex[sliderId] = (currentIndex[sliderId] + 1) % slides.length;
+          updateSlider(slider, currentIndex[sliderId]);
+        }
+    
+        function prevSlide(sliderId) {
+          const slider = document.getElementById(sliderId);
+          const slides = slider.children;
+          currentIndex[sliderId] =
+            (currentIndex[sliderId] - 1 + slides.length) % slides.length;
+          updateSlider(slider, currentIndex[sliderId]);
+        }
+    
+        function updateSlider(slider, index) {
+          const width = slider.children[0].offsetWidth;
+          slider.style.transform = `translateX(-${index * width}px)`;
+        }
+    
+        function autoTransition(sliderId) {
+          intervalIds[sliderId] = setInterval(() => {
+            nextSlide(sliderId);
+          }, 5000);
+        }
+    
+        function stopTransition(sliderId) {
+          clearInterval(intervalIds[sliderId]);
+        }
+    
+        // Initialize sliders
+        document.addEventListener("DOMContentLoaded", () => {
+          autoTransition('slider1');
+          autoTransition('slider2');
+          autoTransition('slider3');
+          autoTransition('slider4');
+          autoTransition('slider5');
+        });
+    </script>
 </body>
 </html>

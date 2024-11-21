@@ -18,7 +18,7 @@ function nextSlide() {
 }
 
 // Automatically switch slides every 3 seconds
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 5000);
 
 // Initialize first slide
 showSlide(currentSlide);

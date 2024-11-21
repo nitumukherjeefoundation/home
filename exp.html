@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Image Sliders</title>
+  <style>
+    .slider-container {
+      position: relative;
+      max-width: 40%;
+      overflow: hidden;
+      margin: 20px 0;
+      border: 2px solid #ccc;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    button.prev {
+      left: 10px;
+    }
+
+    button.next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slider 1 -->
+  <div class="slider-container">
+    <div class="slider" id="slider1">
+      <div class="slide"><img src="img/gallery/2024 BD.png" alt="Image 1"></div>
+      <div class="slide"><img src="img/gallery/2024 SS.png" alt="Image 2"></div>
+    </div>
+    <button class="prev" onclick="prevSlide('slider1')">⟨</button>
+    <button class="next" onclick="nextSlide('slider1')">⟩</button>
+  </div>
+
+  <!-- Slider 2 -->
+  <div class="slider-container">
+    <div class="slider" id="slider2">
+      <div class="slide"><img src="img/gallery/2022 BD.png" alt="Image 4"></div>
+      <div class="slide"><img src="img/gallery/2022 EDU.png" alt="Image 5"></div>
+      <div class="slide"><img src="img/gallery/2022 ENV.png" alt="Image 6"></div>
+    </div>
+    <button class="prev" onclick="prevSlide('slider2')">⟨</button>
+    <button class="next" onclick="nextSlide('slider2')">⟩</button>
+  </div>
+
+  <script>
+    const currentIndex = { slider1: 0, slider2: 0 };
+    const intervalIds = {};
+
+    function nextSlide(sliderId) {
+      const slider = document.getElementById(sliderId);
+      const slides = slider.children;
+      currentIndex[sliderId] = (currentIndex[sliderId] + 1) % slides.length;
+      updateSlider(slider, currentIndex[sliderId]);
+    }
+
+    function prevSlide(sliderId) {
+      const slider = document.getElementById(sliderId);
+      const slides = slider.children;
+      currentIndex[sliderId] =
+        (currentIndex[sliderId] - 1 + slides.length) % slides.length;
+      updateSlider(slider, currentIndex[sliderId]);
+    }
+
+    function updateSlider(slider, index) {
+      const width = slider.children[0].offsetWidth;
+      slider.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    function autoTransition(sliderId) {
+      intervalIds[sliderId] = setInterval(() => {
+        nextSlide(sliderId);
+      }, 3000); // 3 seconds interval
+    }
+
+    function stopTransition(sliderId) {
+      clearInterval(intervalIds[sliderId]);
+    }
+
+    // Initialize sliders
+    document.addEventListener("DOMContentLoaded", () => {
+      autoTransition('slider1');
+      autoTransition('slider2');
+    });
+  </script>
+</body>
+</html>
