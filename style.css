@@ -31,6 +31,7 @@ html, body {
 
 .tagline{
     color: #ccc;
+    font-size: 1vw;
 }
 
 .web_logo li {
@@ -79,6 +80,7 @@ nav ul li {
     margin-left: -6vw; /* Adjust left offset */
     opacity: 0; /* Initially transparent */
     transition: opacity 0.3s; /* Smooth transition */
+    font-size: 1.2vw;
 }
 
 /* Show the tooltip on hover */
