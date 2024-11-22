@@ -24,9 +24,13 @@ html, body {
 }
 
 .web_logo img{
-    height: 4vw;
+    height: 6vw;
     filter: brightness(0) invert(1); 
     transition: transform 0.3s ease;
+}
+
+.tagline{
+    color: #ccc;
 }
 
 .web_logo li {
@@ -62,17 +66,17 @@ nav ul li {
 /* Tooltip Styles */
 .tooltip {
     visibility: hidden; /* Initially hidden */
-    width: 120px; /* Width of the tooltip */
+    width: 10vw; /* Width of the tooltip */
     background-color: #555; /* Background color */
     color: #fff; /* Text color */
     text-align: center; /* Centered text */
-    border-radius: 5px; /* Rounded corners */
-    padding: 5px; /* Padding for tooltip */
+    border-radius: .5vw; /* Rounded corners */
+    padding: .5vw; /* Padding for tooltip */
     position: absolute; /* Positioned relative to the parent */
     z-index: 1; /* Above other elements */
     top: 125%; /* Position below the menu item */
     left: 50%; /* Center tooltip */
-    margin-left: -60px; /* Adjust left offset */
+    margin-left: -6vw; /* Adjust left offset */
     opacity: 0; /* Initially transparent */
     transition: opacity 0.3s; /* Smooth transition */
 }
@@ -85,37 +89,37 @@ nav ul li:hover .tooltip {
 
 /* Logo Home */
 .logo-home {
-    width: 2.1vw; /* Set width for the home logo */
+    width: 2.5vw; /* Set width for the home logo */
     height: auto;
 }
 
 /* Logo About Us */
 .logo-about {
-    width: 2.1vw; /* Set width for the about logo */
+    width: 2.5vw; /* Set width for the about logo */
     height: auto;
 }
 
 /* Logo Gallery */
 .logo-gallery {
-    width: 2.7vw; /* Set width for the gallery logo */
+    width: 3.1vw; /* Set width for the gallery logo */
     height: auto;
 }
 
 /* Logo Ongoing Work */
 .logo-ongoing {
-    width: 2vw; /* Set width for the ongoing work logo */
+    width: 2.4vw; /* Set width for the ongoing work logo */
     height: auto;
 }
 
 /* Logo Articles */
 .logo-writings {
-    width: 2vw; /* Set width for the ongoing work logo */
+    width: 2.4vw; /* Set width for the ongoing work logo */
     height: auto;
 }
 
 /* Logo Project Hattimatim Tim */
 .logo-project {
-    width: 2.3vw; /* Set width for the project logo */
+    width: 2.7vw; /* Set width for the project logo */
     height: auto;
 }
 
@@ -144,9 +148,8 @@ nav .menu li a img:hover {
 
 /* Slider Styles */
 .slider {
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 70%;
+    margin: 2vw auto;
     overflow: hidden;
     flex-grow: 1;
 }
@@ -166,7 +169,7 @@ nav .menu li a img:hover {
     position: relative;
     max-width: 65%;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 2vw 0;
   }
 
   .slider-gal {
@@ -189,24 +192,31 @@ nav .menu li a img:hover {
     filter: brightness(.9);
   }
 
-  button {
-    position: absolute;
+
+  .prev {
+    left: 1vw;
+    position: static;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 1vw;
     cursor: pointer;
     z-index: 10;
   }
 
-  button.prev {
-    left: 10px;
-  }
-
-  button.next {
-    right: 10px;
+  .next {
+    right: 1vw;
+    position: static;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1vw;
+    cursor: pointer;
+    z-index: 10;
   }
 
 /* Container for Intro Text */
@@ -243,7 +253,7 @@ nav .menu li a img:hover {
     background-color: #0e3661; /* Blue background color */
     color: #fff; /* White text color */
     border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: .8vw; /* Rounded corners */
     text-decoration: none; /* Removes underline */
     font-size: 1vw; /* Font size that scales with viewport */
     margin-top: 1.5vw; /* Space above the button */
@@ -260,25 +270,6 @@ nav .menu li a img:hover {
 /* Ensure padding remains intact */
 .intro-text p {
     padding: 0; /* Remove any default padding on paragraphs */
-}
-
-/* Optional Media Query for even better responsiveness on small screens */
-@media (max-width: 600px) {
-    .intro-heading {
-        font-size: 5vw;
-    }
-
-    .intro-large-text {
-        font-size: 4vw;
-    }
-
-    .intro-small-text {
-        font-size: 3vw;
-    }
-
-    .know-more-button {
-        font-size: 4vw; /* Scale button size for smaller screens */
-    }
 }
 
 /* Footer Styles */
@@ -304,8 +295,8 @@ footer {
 /* Each section takes up 1/3 of the footer */
 .footer-section > div {
     flex: 1; /* Makes each section equal in width */
-    padding: 0 20px; /* Adds padding inside each section */
-    min-width: 200px; /* Ensures sections don't collapse on smaller screens */
+    padding: 0 2vw; /* Adds padding inside each section */
+    min-width: 20vw; /* Ensures sections don't collapse on smaller screens */
 }
 
 .footer-address a {
@@ -344,63 +335,39 @@ footer {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-/* mail */
-.mail a {
+.footer-other {
+    text-align: center;
+}
+
+.footer-other h2 {
+    font-size: 1.4vw;
+    margin-bottom: .3vw;
+}
+
+.contact-item {
     display: inline-block;
-    margin: 0 2vw; /* Adds horizontal spacing between icons */
+    text-align: left;
+    margin: 0 2vw;
 }
 
-.mail img {
-    width: 2vw; /* Set an appropriate size for the icons */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.mail a img {
-    height: auto;
-    filter: invert(1); /* This inverts the image color to white if logos are dark */
+.contact-item img {
+    width: 2.3vw;
+    height: 2.3vw;
+    vertical-align: middle;
+    filter: brightness(1) invert(1); 
     transition: transform 0.3s ease;
 }
 
-.mail a img:hover {
+.contact-item p {
+    display: inline;
+    margin-left: 1vw;
+    font-size: 1vw;
+}
+
+.contact-item img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-.mail-txt {
-    font-size: 1.1vw;
-}
-
-/* call */
-
-.call img {
-    width: 2vw; /* Set an appropriate size for the icons */
-    height: auto;
-    filter: invert(1); /* This inverts the image color to white if logos are dark */
-    transition: transform 0.3s ease;
-}
-
-.call img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-.call-txt {
-    font-size: 1.1vw;
-}
-
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    nav .logo h1 {
-        font-size: 4vw;
-    }
-    nav .menu li a {
-        font-size: 3vw;
-    }
-    .intro-text p {
-        font-size: 4vw;
-    }
-    footer .footer-content {
-        font-size: 3vw;
-    }
-}
 
 /* Container for Timeline Section */
 .timeline-text {
@@ -418,9 +385,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
-    margin: 20px auto;
+    margin: 1vw auto;
     position: relative;
-    padding: 40px 0;
+    padding: 2vw 0;
 }
 
 /* Timeline event */
@@ -436,23 +403,25 @@ footer {
     color: #fff;
     padding: 1vw;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 6vw;
+    height: 6vw;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    font-size: 1.5vw;
 }
 
 /* Timeline content box */
 .timeline-content {
     background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 1vw rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    padding: 1vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.1);
+    margin-top: 2vw;
     position: relative;
-    max-width: 200px;
+    max-width: 15vw;
+    min-height: 10vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -464,51 +433,27 @@ footer {
     top: 27%; /* Position the line at the vertical center of the timeline */
     left: 0;
     right: 0;
-    height: 4px;
+    height: .3vw;
     background-color: #ccc; 
     z-index: 0;
 }
 
 /* Styling the content title */
 .timeline-content h3 {
-    font-size: 18px;
+    font-size: 1.4vw;
     color: #34495E;
 }
 
 /* Styling the content description */
 .timeline-content p {
     color: #666;
-    font-size: 14px;
+    font-size: 1.1vw;
 }
 
 /* On hover, the timeline event box can pop a bit */
 .timeline-event:hover .timeline-content {
     background-color: #f1f1f1;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .timeline-event {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .timeline-content {
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .timeline::before {
-        height: 0;
-        width: 100%;
-    }
+    box-shadow: 0 .3vw .2vw rgba(0, 0, 0, 0.2);
 }
 
 .grid-container {
@@ -581,10 +526,8 @@ footer {
     /* width: 22vw;
     background-color: #f6f7f2;
     border: .1vw solid #ddd; */
-    padding: 1.3vw;
+    padding: 1vw;
     text-align: center;
-    /* border-radius: 2.5vw;
-    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.1); */
 }
 
 .grid-member-item img {
@@ -597,6 +540,14 @@ footer {
 
 .grid-member-item:hover img{
     transform: scale(1.05);
+}
+
+.grid-member-item h5{
+    font-size: .9vw;
+}
+
+.grid-member-item h6{
+    font-size: .7vw;
 }
 
 .two-grid {
@@ -627,9 +578,11 @@ footer {
 }
 
 .collapsible {
+    color: #33404e;
+    position: relative;
     background-color: #eef0e8;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-top: 1.2vw;
+    margin-bottom: 1.2vw;
     padding: 1.5vw;
     padding-left: 3vw;
     width: 100%;
