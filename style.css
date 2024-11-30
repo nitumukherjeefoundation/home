@@ -286,90 +286,55 @@ footer {
     margin-top: 2vw;
 }
 
+/* General Footer Section Styling */
 .footer-section {
-    display: flex;
-    justify-content: space-between; /* Space between each section */
-    align-items: center;
-    flex-wrap: wrap; /* Ensure responsiveness */
-    text-align: center; /* Align text to the left in each section */
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr); 
+    margin: 1vw;
+    gap: 2vw; 
 }
 
-/* Each section takes up 1/3 of the footer */
-.footer-section > div {
-    flex: 1; /* Makes each section equal in width */
-    padding: 0 2vw; /* Adds padding inside each section */
-    min-width: 20vw; /* Ensures sections don't collapse on smaller screens */
-}
-
-.footer-address a {
-    display: inline-block;
-    margin: 0 1vw; /* Adds horizontal spacing between icons */
-}
-
-.footer-address a img {
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.footer-address a img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-
-/* Social Media Icon Styling */
-.social-media a {
-    display: inline-block;
-    margin: 0 2vw; /* Adds horizontal spacing between icons */
-}
-
-.social-media img {
-    width: 5vw; /* Set an appropriate size for the icons */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.social-media a img {
-    height: auto;
-    filter: brightness(0) invert(1); /* This inverts the image color to white if logos are dark */
-    transition: transform 0.3s ease;
-}
-
-.social-media a img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-.footer-other {
+/* Styling Each Footer Item */
+.footer-item {
     text-align: center;
 }
 
-.footer-other h2 {
-    font-size: 1.4vw;
-    margin-bottom: .3vw;
-}
-
-.contact-item {
-    display: inline-block;
-    text-align: left;
-    margin: 0 2vw;
-}
-
-.contact-item img {
-    width: 2.3vw;
-    height: 2.3vw;
-    vertical-align: middle;
-    filter: brightness(1) invert(1); 
+/* Social Media Icons Styling */
+.footer-item img {
+    width: 5.5vw; 
+    height: auto;
+    margin: 0 1vw; 
     transition: transform 0.3s ease;
 }
 
-.contact-item p {
-    display: inline;
-    margin-left: 1vw;
-    font-size: 1vw;
+.footer-item a img:hover {
+    transform: scale(1.1); 
 }
 
-.contact-item img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+/* Contact Section Styling */
+.footer-item h2 {
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
 }
 
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vw;
+}
+
+.contact-row img {
+    width: 3.3vw; 
+    height: auto;
+    margin-right: 1vw;
+}
+
+.contact-row p {
+    font-size: 1.2vw;
+    margin: 0;
+}
 
 /* Container for Timeline Section */
 .timeline-text {
