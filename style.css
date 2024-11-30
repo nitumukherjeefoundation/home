@@ -302,7 +302,7 @@ footer {
 
 /* Social Media Icons Styling */
 .footer-item img {
-    width: 3vw; 
+    width: 5vw; 
     height: auto;
     margin: 0 1vw; 
     transition: transform 0.3s ease;
@@ -326,7 +326,7 @@ footer {
 }
 
 .contact-row img {
-    width: 3vw; 
+    width: 3.2vw; 
     height: auto;
     margin-right: 1vw;
 }
