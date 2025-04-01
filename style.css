@@ -566,7 +566,7 @@ footer {
   }
 
 .collapsible:after {
-    content: '\002B';
+    content: '\25BE';
     color: rgb(85, 65, 65);
     font-weight: bold;
     float: right;
