@@ -592,3 +592,6 @@ footer {
     text-align: justify;
     padding: 1vw;
 }
+.footer-section a{
+    color: #333;
+}
